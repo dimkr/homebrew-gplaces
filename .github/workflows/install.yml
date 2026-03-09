@@ -1,0 +1,25 @@
+name: Install Formula
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  install:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@main
+
+      - name: Install Formula
+        run: brew install gplaces
+
+      - name: Test Formula
+        run: brew test gplaces
