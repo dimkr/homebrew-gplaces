@@ -2,9 +2,9 @@ class Gplaces < Formula
   desc "Terminal based Gemini client"
   homepage "https://github.com/dimkr/gplaces"
   url homepage,
-      tag:        "v0.20.4",
+      tag:        "v0.20.5",
       branch:     "gemini",
-      revision:   "2cf2ba7d3054cbd83217aecc62643c7437f9660f",
+      revision:   "30c8025ad27a1c702ba8d7eec786164641cfade7",
       using:      :git,
       submodules: true
   license "GPL-3.0-or-later"
